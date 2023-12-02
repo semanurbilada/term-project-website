@@ -1,9 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
-    scroll-behavior: smooth;
-    font-family: Poppins;
-    text-align: center;
+main {
+    height: 100vh;
 }
