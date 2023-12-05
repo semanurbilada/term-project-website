@@ -13,15 +13,30 @@ body {
     scroll-behavior: smooth;
     font-family: Poppins;
     text-align: center;
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
+    background: linear-gradient(-45deg, rgba(102, 102, 237, 0.2), rgba(102, 102, 237, 0.7));
+    background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .container {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 1rem/* 16px */;
-    padding-left: 1rem/* 16px */;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 @media (min-width: 320px) {
@@ -58,9 +73,10 @@ header {
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
-.container {
+header .container {
     display: flex;
     flex-direction: column;
+    /* gap: 10px; */
 }
 
 .navbar {
@@ -86,7 +102,7 @@ header {
     transform: scale(1.1);
 }
 
-.navbar-items-icons {
+.navbar-icons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,19 +110,19 @@ header {
     font-size: 28px;
 }
 
-.navbar-items-icons a,
-.navbar-items-icons li {
+.navbar-icons a,
+.navbar-icons li {
     color: white;
     transition: 0.4s;
 }
 
-.navbar-items-icons a:hover,
-.navbar-items-icons li:hover {
+.navbar-icons a:hover,
+.navbar-icons li:hover {
     color: var(--border);
     transform: scale(1.2);
 }
 
-.navbar-items-icons li {
+.navbar-icons li {
     color: white;
     cursor: pointer;
     list-style-type: none;
@@ -130,17 +146,20 @@ header {
     padding-inline-start: 0px;
 }
 
-.sub-navbar ul a {
+.sub-navbar li a {
     color: white;
     font-size: 18px;
     font-weight: 400;
-    transition: 0.5s;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-.sub-navbar ul a:hover,
-.sub-navbar ul a.active {
-    transform: 1.1;
+.sub-navbar li a:hover {
+    color: var(--border);
+    transform: 1.2;
+}
+
+.sub-navbar li a.active {
     color: var(--border);
 }
 
@@ -149,7 +168,11 @@ header {
         padding: 30px 0px 10px;
     }
 
-    .navbar-items-icons {
+    header .container {
+        gap: 30px;
+    }
+
+    .navbar-icons {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -158,7 +181,7 @@ header {
     }
 
     .sub-navbar {
-        height: 30vh;
+        height: 35vh;
         display: flex;
         justify-content: center;
         transition: 0.5s;
@@ -175,7 +198,7 @@ header {
 }
 
 @media (max-width: 480px) {
-    .navbar-items-icons {
+    .navbar-icons {
         font-size: 28px;
     }
     
