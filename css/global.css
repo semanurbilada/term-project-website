@@ -13,10 +13,14 @@ body {
     scroll-behavior: smooth;
     font-family: Poppins;
     text-align: center;
-    /* background-color: var(--bg); */
-    background: linear-gradient(-45deg, rgba(102, 102, 237, 0.2), rgba(102, 102, 237, 0.7));
+    background: linear-gradient(
+        45deg, 
+        rgba(102, 102, 237, 0.2), 
+        rgb(255, 255, 255),
+        rgba(102, 102, 237, 0.7)
+    );
     background-size: 400% 400%;
-	animation: gradient 8s ease infinite;
+	animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
@@ -159,7 +163,8 @@ header .container {
     transform: 1.2;
 }
 
-.sub-navbar li a.active {
+.sub-navbar li a.active,
+.navbar-icons .navbar-icons-active {
     color: var(--border);
 }
 

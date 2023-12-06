@@ -11,10 +11,57 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="../css/global.css">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="#">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
     </head>
 
     <body>
-       
+        <header>
+            <div class="container">
+                <div class="navbar">
+                    <div class="navbar-logo">
+                        <a href="index.html">
+                            <ion-icon name="book"></ion-icon>
+                            BookShop
+                        </a>
+                    </div>
+
+                    <div class="navbar-icons">
+                        <a href="cart.html">
+                            <ion-icon name="cart"></ion-icon>
+                        </a>
+                        
+                        <a href="login.html">
+                            <ion-icon name="person-circle"></ion-icon>
+                        </a>
+                        
+                        <li onclick="showMenu();">
+                            <ion-icon id="menuIcon" name="menu"></ion-icon>
+                        </li>
+                    </div>
+                </div>
+
+                <div class="sub-navbar" id="menuItems">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li> 
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="favourites.html">Favourites</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>    
+
+        <script src="../js/index.js"></script>  
+
+        <!-- ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>

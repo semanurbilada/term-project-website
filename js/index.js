@@ -10,6 +10,7 @@ menuIcon.name="menu";
 
 function showMenu() {
     if(menuItems.style.maxHeight=="0px"){
+        
         menuItems.style.maxHeight="400px";
         menuItems.style.opacity="100%";
         menuItems.style.pointerEvents="auto";
