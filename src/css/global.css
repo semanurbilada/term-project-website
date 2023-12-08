@@ -5,6 +5,54 @@
     --border: rgb(46, 39, 108);
 }
 
+@font-face {
+    font-family: "Poppins";
+    font-weight: 100;
+    src: url("/fonts/Poppins-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 200;
+    src: url("/fonts/Poppins-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 300;
+    src: url("/fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    src: url("/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    src: url("/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    src: url("/fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    src: url("/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 800;
+    src: url("/fonts/Poppins-ExtraBold.ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -20,7 +68,7 @@ body {
         rgba(102, 102, 237, 0.7)
     );
     background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 10s ease-out infinite;
 }
 
 @keyframes gradient {
@@ -71,10 +119,11 @@ body {
 header {
     position: sticky;
     top: 0;
-    z-index: 999; /* TODO: DÜZELTİLECEK! */
+    z-index: 100;
     padding: 30px 0px 20px;
     background-color: var(--navbar);
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    transition: 0.3s;
 }
 
 header .container {

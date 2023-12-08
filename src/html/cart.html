@@ -11,11 +11,7 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="../css/global.css">
-        <link rel="stylesheet" href="#">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/cart.css">
     </head>
 
     <body>
@@ -23,7 +19,7 @@
             <div class="container">
                 <div class="navbar">
                     <div class="navbar-logo">
-                        <a href="index.html">
+                        <a href="/index.html">
                             <ion-icon name="book"></ion-icon>
                             BookShop
                         </a>
@@ -46,10 +42,10 @@
 
                 <div class="sub-navbar" id="menuItems">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="shop.html">Shop</a></li> 
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="favourites.html">favourites</a></li>
+                        <li><a href="favourites.html">Favourites</a></li>
                         <li><a href="support.html">Support</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -57,6 +53,23 @@
                 </div>
             </div>
         </header>    
+
+        <main>
+            <div class="container-cart">
+                <h1>Cart</h1>
+                <div class="product">
+                    <img src="book.jpg" alt="Book Image">
+                    <h3>Product Name</h3>
+                    <p class="price">$19.99</p>
+                    <button onclick="addToCart()">Add to Cart</button>
+                </div>
+                <div class="cart">
+                    <h2>Shopping Cart</h2>
+                    <ul id="cartItems"></ul>
+                    <p>Total: $<span id="totalPrice">0.00</span></p>
+                </div>
+            </div>
+        </main>
 
         <script src="../js/index.js"></script>  
 
