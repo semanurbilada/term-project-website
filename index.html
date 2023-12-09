@@ -61,21 +61,39 @@
     <main>
       <div class="swiper main-swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide" id="slide1">
+            <div class="container">
+              <h1>Welcome to Book Shop!</h1>
+              <p>Explore a world of books and stories with our special collection.</p>
+              <p>Find your next favorite read and rush on exciting literary adventures.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide" id="slide2">
+            <div class="container">
+              <h1>Discover Great Discounts!</h1>
+              <p>Reveal the joy of reading with our special discounts on new arrivals.</p>
+              <p>Grab your favorite books at unbeatable prices and make your reading journey even more delightful.</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide" id="slide3">
+            <div class="container">
+              <h1>Stay Tuned for Exciting Updates!</h1>
+              <p>Follow us for the latest updates and don't miss out on the literary news!</p>
+            </div>
+          </div>
         </div>
+
         <div class="swiper-pagination"></div>
-        
-        <div class="swiper-scrollbar"></div>
       </div>
     </main>
-
 
     <script src="/src/js/index.js"></script>  
     <!-- swiper -->
     <script type="module" src="/src/js/mainSwiper.js"></script>
     <!-- ionicons -->
-    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

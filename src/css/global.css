@@ -1,9 +1,12 @@
 :root{
     --bg: rgba(102, 102, 237, 0.2);
     --navbar: rgba(102, 102, 237, 0.7);
+    --navbar-scroll: rgba(102, 102, 237, 1);
     --text: rgba(53, 53, 131, 0.7);
     --border: rgb(46, 39, 108);
 }
+
+/* TODO: root colors düzenlenecek! */
 
 @font-face {
     font-family: "Poppins";
@@ -116,6 +119,12 @@ body {
     }
 }
 
+h1 {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 50px;
+}
+
 /* Navbar */
 header {
     position: sticky;
@@ -143,7 +152,6 @@ header .container {
 .navbar-logo a {
     color: white;
     font-size: 23px;
-    font-weight: 300;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,6 +227,10 @@ header .container {
 }
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+    
     header {
         padding: 30px 0px 10px;
     }
@@ -253,9 +265,14 @@ header .container {
 }
 
 @media (max-width: 480px) {
+    h1 {
+        font-size: 25px;
+    }
+
     .navbar-logo a {
-        font-size: 22px;
         gap: 2px;
+        font-size: 22px;
+        font-weight: 300;
     }
 
     .navbar-icons {

@@ -30,8 +30,8 @@ function showMenu() {
 let navbar = document.getElementById('header');
 
 function changeNavbarBg() {
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = "rgba(102, 102, 237, 1)";
+    if (window.scrollY > 30) {
+        navbar.style.backgroundColor = "var(--navbar-scroll)";
     } else {
         navbar.style.backgroundColor = "var(--navbar)";
     }

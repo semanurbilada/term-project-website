@@ -1,21 +1,18 @@
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const swiper = new Swiper('.main-swiper', {
-    modules: [ Pagination ],
-    direction: "horizontal",
+    modules: [ Autoplay, Pagination ],
     loop: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
-        scrollable: true
     },
     autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
+      delay: 4500,
+      disableOnInteraction: false,
     },
 
     //TODO: grid-swiper: (popüler yazarlar ksımında kullanılacak - otomatik geçiş)
