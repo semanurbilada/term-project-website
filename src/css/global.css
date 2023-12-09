@@ -60,6 +60,7 @@ body {
     border: 0;
     scroll-behavior: smooth;
     font-family: Poppins;
+    font-weight: 400;
     text-align: center;
     background: linear-gradient(
         45deg, 
@@ -142,6 +143,7 @@ header .container {
 .navbar-logo a {
     color: white;
     font-size: 23px;
+    font-weight: 300;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,7 +204,6 @@ header .container {
 .sub-navbar li a {
     color: white;
     font-size: 18px;
-    font-weight: 400;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -252,8 +253,13 @@ header .container {
 }
 
 @media (max-width: 480px) {
+    .navbar-logo a {
+        font-size: 22px;
+        gap: 2px;
+    }
+
     .navbar-icons {
-        font-size: 28px;
+        font-size: 25px;
     }
     
     .sub-navbar ul a {

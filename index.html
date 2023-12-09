@@ -26,16 +26,20 @@
           </div>
 
           <div class="navbar-icons">
+            <li>
+              <ion-icon name="search"></ion-icon>
+            </li>
+
             <a href="../src/html/cart.html">
-                <ion-icon name="cart"></ion-icon>
+              <ion-icon name="cart"></ion-icon>
             </a>
 
             <a href="../src/html/login.html">
-                <ion-icon name="person-circle"></ion-icon>
+              <ion-icon name="person-circle"></ion-icon>
             </a>
 
             <li onclick="showMenu();">
-                <ion-icon id="menuIcon" name="menu"></ion-icon>
+              <ion-icon id="menuIcon" name="menu"></ion-icon>
             </li>
           </div>
         </div>
@@ -55,7 +59,7 @@
     </header>    
 
     <main>
-      <div class="swiper">
+      <div class="swiper main-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">Slide 1</div>
           <div class="swiper-slide">Slide 2</div>
@@ -70,9 +74,8 @@
 
     <script src="/src/js/index.js"></script>  
     <!-- swiper -->
-    <script type="module" src="/src/js/swiper.js"></script>
+    <script type="module" src="/src/js/mainSwiper.js"></script>
     <!-- ionicons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
   </body>
 </html>
