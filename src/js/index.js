@@ -2,6 +2,7 @@
 let menuItems=document.getElementById('menuItems');
 let menuIcon=document.getElementById('menuIcon');
 
+// Initial styles
 menuItems.style.maxHeight="0px";
 menuItems.style.opacity="0%";
 menuItems.style.pointerEvents="none";
@@ -9,6 +10,7 @@ menuItems.style.pointerEvents="none";
 menuIcon.name="menu";
 
 function showMenu() {
+    // Logic of toggle
     if(menuItems.style.maxHeight=="0px") {
         
         menuItems.style.maxHeight="400px";
@@ -26,19 +28,19 @@ function showMenu() {
     }
 }
 
-// Navbar Color Change Function based on scroll
-let navbar = document.getElementById('header');
-
+// Navbar Color Change Function
 function changeNavbarBg() {
+    let navbar = document.getElementById('header');
+
+    // Change navbar bg-color based on scroll position
     if (window.scrollY > 30) {
         navbar.style.backgroundColor = "var(--navbar-scroll)";
     } else {
         navbar.style.backgroundColor = "var(--navbar)";
     }
 }
-// call the function
+// call the function on scroll
 document.addEventListener('scroll', changeNavbarBg);
-
 
 
 //Cart Add Function - DENEME
