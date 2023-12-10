@@ -1,9 +1,21 @@
 :root{
-    --bg: rgba(102, 102, 237, 0.2);
+    --bg-light: rgba(102, 102, 237, 0.2);
+    --bg: rgba(102, 102, 237, 0.5); /*deneme kalsın şimdilik*/
+    --bg-dark: rgba(102, 102, 237, 0.7);
+
+    --navbar-light: rgb(161, 169, 254);
     --navbar: rgba(102, 102, 237, 0.7);
+    --navbar-dark: rgba(102, 102, 237, 1);
+    
     --navbar-scroll: rgba(102, 102, 237, 1);
+    
+    --text-light: #EAE7FA;
     --text: rgba(53, 53, 131, 0.7);
+    --text-dark: rgba(53, 53, 131, 0.9);
+
+    --border-light: rgb(46, 39, 108);
     --border: rgb(46, 39, 108);
+    --border-dark: rgb(46, 39, 108);
 }
 
 /* TODO: root colors düzenlenecek! */
@@ -67,9 +79,9 @@ body {
     text-align: center;
     background: linear-gradient(
         45deg, 
-        rgba(102, 102, 237, 0.2), 
+        rgba(102, 102, 237, 0.2), /* bg-light */
         rgb(255, 255, 255),
-        rgba(102, 102, 237, 0.7)
+        rgba(102, 102, 237, 0.7) /* bg-dark */
     );
     background-size: 400% 400%;
 	animation: gradient 10s ease-out infinite;
@@ -123,6 +135,20 @@ h1 {
     font-family: Poppins;
     font-weight: 400;
     font-size: 50px;
+}
+
+ul {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Navbar */
@@ -212,7 +238,6 @@ header .container {
 .sub-navbar li a {
     color: white;
     font-size: 18px;
-    text-decoration: none;
     transition: 0.3s;
 }
 
@@ -226,11 +251,54 @@ header .container {
     color: var(--border);
 }
 
+/* Footer */
+/* .footer {
+    width: 100%;
+    color: var(--border-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-top {
+    width: auto;
+    z-index: 50;
+    padding: 30px 10px;
+    border-radius: 25px;
+    background-color: var(--navbar-light);
+}
+
+.footer-top ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.footer-top ul li {
+    width: 30%;
+    list-style-type: none;
+}
+
+.footer-top ul li a {
+    color: var(--border);
+}
+
+.footer-bottom {
+    width: 100%;
+    z-index: 10;
+    color: white;
+    margin-top: -30px;
+    padding: 32px 10px;
+    background-color: var(--navbar-dark);
+} */
+
 @media (max-width: 768px) {
     h1 {
         font-size: 30px;
     }
     
+    /* Navbar */
     header {
         padding: 30px 0px 10px;
     }
@@ -261,6 +329,16 @@ header .container {
 
     .sub-navbar ul a {
         font-size: 18px;
+    }
+
+    /* Footer */
+    .footer-top {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .footer-top ul {
+        flex-direction: column;
     }
 }
 
