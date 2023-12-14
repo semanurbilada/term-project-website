@@ -66,6 +66,25 @@ main {
     opacity: 1; 
 }
 
+/* Clock */
+.countdown {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Grid-swiper */
+.popular {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
     /* Main Swiper */
     .swiper-slide {

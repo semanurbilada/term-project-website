@@ -9,7 +9,7 @@
     
     --navbar-scroll: rgba(102, 102, 237, 1);
     
-    --text-light: #EAE7FA;
+    --text-light: rgb(234, 231, 250);
     --text: rgba(53, 53, 131, 0.7);
     --text-dark: rgba(53, 53, 131, 0.9);
 
@@ -79,9 +79,12 @@ body {
     text-align: center;
     background: linear-gradient(
         45deg, 
-        rgba(102, 102, 237, 0.2), /* bg-light */
+        /* rgba(102, 102, 237, 0.2),
+        rgb(234, 231, 250),
+        rgba(102, 102, 237, 0.7)  */
+        rgba(102, 102, 237, 0.3),
         rgb(255, 255, 255),
-        rgba(102, 102, 237, 0.7) /* bg-dark */
+        rgba(102, 102, 237, 0.9)
     );
     background-size: 400% 400%;
 	animation: gradient 10s ease-out infinite;
@@ -100,7 +103,6 @@ body {
 }
 
 .container {
-    width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-right: 1rem;
@@ -131,6 +133,7 @@ body {
     }
 }
 
+/* Add and disable default properties */
 h1 {
     font-family: Poppins;
     font-weight: 400;
@@ -182,7 +185,6 @@ header .container {
     align-items: center;
     justify-content: center;
     gap: 3px;
-    text-decoration: none;
     transition: 0.5s;
 }
 
@@ -214,7 +216,6 @@ header .container {
 .navbar-icons li {
     color: white;
     cursor: pointer;
-    list-style-type: none;
 }
 
 .sub-navbar {
@@ -231,7 +232,6 @@ header .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    list-style-type: none;
     padding-inline-start: 0px;
 }
 
@@ -265,7 +265,7 @@ header .container {
 
 .footer-top .container {
     width: auto;
-    padding: 20px 10px;    
+    padding: 30px 10px;
     border-radius: 25px;
     background-color: var(--navbar-light);
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
@@ -280,17 +280,20 @@ header .container {
 
 .footer-top ul li {
     width: 30%;
-    list-style-type: none;
+}
+
+.footer-top ion-icon {
+    font-size: 25px;
 }
 
 .footer-bottom {
-    width: 100%;
     color: white;
     margin-top: -40px;
-    padding: 40px 0 10px;
+    padding: 45px 0 10px;
     background-color: var(--navbar-dark);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     h1 {
         font-size: 30px;
@@ -336,6 +339,8 @@ header .container {
 
     .footer-top {
         width: 100%;
+        position: static;
+        z-index: 0;
         border-radius: 0;
         background-color: var(--navbar-light);
     }
