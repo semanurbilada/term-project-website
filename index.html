@@ -8,10 +8,12 @@
     <meta name="author" content="Semanur Bilada" />
     
     <title>SB | BookShop</title>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="../src/css/global.css">
     <link rel="stylesheet" href="../src/css/style.css">
+    <!-- favicon as svg -->
+    <link rel="icon" href="/images/favicon-book.svg">
   </head>
 
   <body>
@@ -94,7 +96,81 @@
     </section>
 
     <section class="popular">
-      <div>TODO: popüler yazarlar ve kitaplar için autoplay grid-swiper tasarlanacak!</div>
+      <div class="container">
+        <h3 class="popular-title">Popüler kitaplar</h3>
+        
+        <div class="swiper grid-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item1.jpg" alt="item">
+              </a>
+            </div>
+  
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item2.jpg" alt="item">
+              </a>
+            </div>
+            
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item3.jpg" alt="item">
+              </a>
+            </div>
+  
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item4.jpg" alt="item">
+              </a>
+            </div>
+            
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item5.jpg" alt="item">
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item6.jpg" alt="item">
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item7.jpg" alt="item">
+              </a>
+            </div>
+            
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item8.jpg" alt="item">
+              </a>
+            </div>
+            
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item9.jpg" alt="item">
+              </a>
+            </div>
+            
+            <div class="swiper-slide">
+              <a href="/src/html/shop.html" target="_blank">
+                <img src="/images/item10.jpg" alt="item">
+              </a>
+            </div>
+          </div>
+  
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fixed-button">
+      <a href="https://github.com/semanurbilada/term-project-website" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
     </section>
 
     <footer class="footer">
@@ -106,7 +182,7 @@
               <p><a href="../html/shop.html">
                 Take a look at discount!
                 <br>
-                <strong>BookShop</strong> is here!
+                <strong><i>BookShop</i></strong> is here!
               </a></p>
             </li>
   
@@ -141,6 +217,7 @@
     <script src="/src/js/index.js"></script>  
     <!-- swiper -->
     <script type="module" src="/src/js/mainSwiper.js"></script>
+    <script type="module" src="/src/js/gridSwiper.js"></script>
     <!-- ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
