@@ -66,13 +66,125 @@ main {
     background-color: rgba(102, 102, 237, 1);
 }
 
-/* Clock */
+/* Benefits */
+.benefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits .container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.benefit-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.benefit-item {
+    padding: 15px;
+    border-radius: 20px;
+    color: var(--border-light);
+    border: solid 1px var(--border-light);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition: 0.5s;
+}
+
+.benefit-item:hover {
+    transform: scale(1.1);
+}
+
+.benefit-info {
+    font-size: 20px;
+}
+
+.benefit-info button {
+    color: white;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 15px; 
+    border: solid 1px var(--border-light);
+    background: var(--border-light);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+    transition: 0.5s;
+}
+
+.benefit-info button:hover {
+    transform: scale(1.1);
+    background: transparent;
+    color: var(--border-light);
+}
+
+.benefit-info button a:hover {
+    color: var(--navbar);
+}
+
+/* Countdown Clock */
 .countdown {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    font-size: 25px;
+}
+
+.countdown-content {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: linear-gradient(
+        rgba(123, 0, 255, 0.2), 
+        rgba(255, 255, 0, 0.2)),
+        url('../../public/images/countdown-bg.jpg');
+}
+
+.countdown-content .container {
+    width: 100%;
+}
+
+.countdown-content h3 {
+    font-weight: 300;
+    font-size: 40px;
+}
+
+#demo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.demo-elements p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.countdown-input {
+    margin-top: 30px;
+    border-radius: 25px;
+    outline: none;
+    padding: 10px 30px;
 }
 
 /* Grid-swiper */
@@ -117,6 +229,8 @@ main {
     height: 35vh;
     object-fit: fill;
     transition: 0.4s;
+    /*shadow-md*/
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .grid-swiper .swiper-slide img:hover {
@@ -145,6 +259,33 @@ main {
 }
 
 /* Responsive */
+@media screen and (max-width: 1024px) {
+    /* Benefits */
+    .benefits .container {
+        height: min-content;
+    }
+
+    .benefit-items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .benefit-item {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .benefit-item:hover {
+        transform: none;
+    }
+
+    .benefit-info {
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     /* Main Swiper */
     .swiper-slide {
@@ -164,6 +305,11 @@ main {
 }
 
 @media screen and (max-width: 480px) {
+    /* Main Swiper */
+    .swiper-slide h1, p {
+        font-size: 20px;
+    }
+
     /* Grid-swiper */
     .popular {
         height: 80vh;

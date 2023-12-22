@@ -275,8 +275,7 @@ header .container {
 }
 
 /* Footer */
-.footer,
-.footer-top ul li a {
+.footer {
     color: var(--border-dark);
 }
 
@@ -309,10 +308,14 @@ header .container {
     font-size: 25px;
 }
 
+.footer-top ul li a {
+    color: var(--border-dark);
+}
+
 .footer-bottom {
     color: white;
     margin-top: -40px;
-    padding: 45px 0 10px;
+    padding: 50px 0 10px;
     background-color: var(--navbar-dark);
 }
 
