@@ -59,6 +59,19 @@
                 </div>
             </div>
         </header>  
+
+        <main>
+            <div id="categoryNav">
+                <button onclick="filterProducts('all')">All</button>
+                <button onclick="filterProducts('books')">Books</button>
+                <button onclick="filterProducts('electronics')">Electronics</button>
+                <!-- Add more buttons for other categories -->
+            </div>
+        
+            <!-- Product container -->
+            <div id="productContainer"></div>
+        </main>
+
         
         <section class="fixed-button">
             <a href="https://github.com/semanurbilada/term-project-website" target="_blank">
@@ -108,6 +121,7 @@
         </footer>
 
         <script src="../js/index.js"></script>  
+        <script src="../js/shop.js"></script>
         <!-- ionicons -->
         <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
