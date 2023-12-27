@@ -16,6 +16,7 @@ const swiper = new Swiper('.grid-swiper', {
       delay: 3000,
       disableOnInteraction: false,
     },
+    // Responsive details
     breakpoints: {
         1024: {
             slidesPerView: 3,

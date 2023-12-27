@@ -2,7 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 AOS.init({
-    once: true,
+    //once: true,
     //duration: 1000,
     disable: false,
 });

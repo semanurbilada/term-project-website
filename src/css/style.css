@@ -81,27 +81,43 @@ main {
     justify-content: space-evenly;
 }
 
+.benefits h3 {
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--border-light);
+    margin-bottom: 10%;
+}
+
 .benefit-items {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 13rem 13rem 13rem 13rem; /*208px*/
     justify-content: space-between;
+    font-size: 15px;
 }
 
 .benefit-item {
-    padding: 15px;
+    font-size: 15px;
+    padding: 25px 10px 20px;
     border-radius: 20px;
     color: var(--border-light);
     border: solid 1px var(--border-light);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    transition: 0.5s;
+    transition: 0.4s;
+}
+
+.benefit-item ion-icon {
+    font-size: 20px;
 }
 
 .benefit-item:hover {
+    background-color: var(--border-light);
+    color: white;
     transform: scale(1.1);
 }
 
 .benefit-info {
-    font-size: 20px;
+    font-size: 25px;
+    color: var(--border-light);
 }
 
 .benefit-info button {
@@ -118,11 +134,13 @@ main {
 .benefit-info button:hover {
     transform: scale(1.1);
     background: transparent;
+    font-weight: 500;
     color: var(--border-light);
 }
 
-.benefit-info button a:hover {
-    color: var(--navbar);
+.benefit-info a button {
+    font-weight: 500;
+    font-size: 15px;
 }
 
 /* Countdown Clock */
@@ -149,7 +167,7 @@ main {
     background-image: linear-gradient(
         rgba(123, 0, 255, 0.2), 
         rgba(255, 255, 0, 0.2)),
-        url('../../public/images/countdown-bg.jpg');
+        url('/images/countdown-bg.jpg');
 }
 
 .countdown-content .container {
@@ -168,6 +186,8 @@ main {
 }
 
 .demo-elements p {
+    font-size: 30px;
+    /* default p values disabled */
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -181,10 +201,26 @@ main {
 }
 
 .countdown-input {
-    margin-top: 30px;
+    color: white;
+    margin-top: 5%;
+    font-size: 15px;
+    border: none;
     border-radius: 25px;
+    padding: 15px 50px;
     outline: none;
-    padding: 10px 30px;
+    background-color: var(--navbar-scroll);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transition: 0.5s;
+}
+
+.countdown-input::placeholder {
+    color: white;
+    font-size: 15px;
+}
+
+.countdown-input:hover {
+    cursor: pointer;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.7);
 }
 
 /* Grid-swiper */
@@ -262,27 +298,38 @@ main {
 @media screen and (max-width: 1024px) {
     /* Benefits */
     .benefits .container {
+        margin-top: 20%;
         height: min-content;
     }
-
+/* 
     .benefit-items {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-    }
+        gap: 20px;
+    } */
 
-    .benefit-item {
+    .benefit-items {
+        grid-template-columns: 13rem 13rem; /*208px*/
+        justify-content: space-evenly;
+        row-gap: 40px;
+        font-size: 10px;
+    }
+    
+    /* .benefit-item {
         border: none;
         border-radius: 0;
         box-shadow: none;
-    }
-
+    } */
+    
     .benefit-item:hover {
+        background-color: inherit;
+        color: inherit;
         transform: none;
     }
 
     .benefit-info {
-        font-size: 16px;
+        margin-top: 10%;
+        font-size: 20px;
     }
 }
 
@@ -302,12 +349,82 @@ main {
         background-color: transparent;
         backdrop-filter: brightness(0.75);
     }
+
+    /* Benefits */
+    .benefits h3 {
+        font-size: 25px;
+        margin-bottom: 10%;
+    }
+
+    .benefit-items {
+        grid-template-columns: 13rem; /*208px*/
+        row-gap: 25px;
+        font-size: 10px;
+    }
+
+    .benefit-item ion-icon {
+        font-size: 17px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     /* Main Swiper */
-    .swiper-slide h1, p {
+    .swiper-slide h1 {
+        font-size: 25px;
+    }
+
+    .swiper-slide p {
         font-size: 20px;
+    }
+
+    /* Benefits */
+    .benefit-info {
+        font-size: 18px;
+    }
+
+    .benefit-info button {
+        padding: 10px 20px;
+    }
+    
+    .benefit-info button:hover {
+        transform: none;
+    }
+
+    .benefit-info a button {
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    /* Countdown */
+    .countdown-content h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .demo-elements p {
+        font-size: 20px;
+    }
+
+    #days,
+    #hours,
+    #minutes,
+    #seconds {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .countdown-input {
+        color: white;
+        margin-top: 10%;
+        font-size: 15px;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+    }
+    
+    .countdown-input::placeholder {
+        font-size: 14px;
+        text-align: center;
     }
 
     /* Grid-swiper */

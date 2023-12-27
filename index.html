@@ -93,6 +93,7 @@
 
     <section class="benefits">
       <div class="container">
+        <h3>Benefits</h3>
         <div class="benefit-items">
           <div class="benefit-item">
             <ion-icon name="send"></ion-icon>
@@ -121,7 +122,12 @@
 
         <div class="benefit-info">
           <p>Everything you need is here!</p>
-          <a href="/src/html/shop.html" target="_blank">
+          <a 
+            href="/src/html/shop.html" 
+            target="_blank" 
+            data-aos="zoom-in-up" 
+            data-aos-duration="900"
+          >
             <button>SHOP NOW</button>
           </a>
         </div>
@@ -155,10 +161,7 @@
             </div>
           </div>
           
-          <div class="countdown-input">
-            <input type="text" placeholder="Enter your e-mail for more updates...">
-            <button>More About</button>
-          </div>
+          <input class="countdown-input" type="email" placeholder="Enter E-mail for updates!">
         </div>
       </div>
     </section>
@@ -283,7 +286,10 @@
     </footer>
 
     <script src="/src/js/index.js"></script>  
-    <!-- swiper -->
+    <script src="/src/js/countdown.js"></script>  
+    <!-- AOS Animation -->
+    <script type="module" src="src/js/aos-init.js"></script>
+    <!-- Swiper JS -->
     <script type="module" src="/src/js/mainSwiper.js"></script>
     <script type="module" src="/src/js/gridSwiper.js"></script>
     <!-- ionicons -->
