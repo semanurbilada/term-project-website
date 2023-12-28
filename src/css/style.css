@@ -216,6 +216,7 @@ main {
 .countdown-input::placeholder {
     color: white;
     font-size: 15px;
+    text-align: center;
 }
 
 .countdown-input:hover {

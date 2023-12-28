@@ -1,5 +1,5 @@
 // Countdown digital clock function
-let countDownDate = new Date("Jan 1, 2024 00:00:00").getTime(); //TODO: Güncelle!!!
+let countDownDate = new Date("Jan 10, 2024 00:00:00").getTime();
 
 let demo = document.getElementById("demo");
 
@@ -14,7 +14,7 @@ let updateTime = setInterval(function() {
   // Get today's date and time
   let now = new Date().getTime();
     
-  // Find the distance between now and the count down date
+  // Find the distance between now and the countdown date
   let distance = countDownDate - now;
     
   // Time calculations for days, hours, minutes and seconds
@@ -23,15 +23,20 @@ let updateTime = setInterval(function() {
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  // Output the results
+  // Output the results seperately for styling
   daysSection.innerHTML = days;
   hoursSection.innerHTML = hours;
   minutesSection.innerHTML = minutes;
   secondsSection.innerHTML = seconds;
     
-  // If the count down is over, write this text
+  // If the count down is over
   if (distance < 0) {
     clearInterval(updateTime);
-    document.getElementById("demo").innerHTML = "Discount is over! Stay Tuned for the next one!";
+
+    //CSS: due to space-between is default
+    demo.style.justifyContent = "center"; 
+
+    // Then write this text
+    demo.innerHTML = "Discount is over! Stay Tuned for the next one!";
   }
 }, 1000);
