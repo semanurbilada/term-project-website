@@ -61,15 +61,18 @@
         </header>  
 
         <main>
-            <div id="categoryNav">
-                <button onclick="filterProducts('all')">All</button>
-                <button onclick="filterProducts('books')">Books</button>
-                <button onclick="filterProducts('electronics')">Electronics</button>
-                <!-- Add more buttons for other categories -->
+            <div class="container">
+                <div id="sidebarCategory">
+                    <button onclick="filterBooks('all')">All</button>
+                    <button onclick="filterBooks('scienceF')">Science-Fiction</button>
+                    <button onclick="filterBooks('comics')">Comics</button>
+                    <button onclick="filterBooks('classics')">Classics</button>
+                    <button onclick="filterBooks('romance')">Romance</button>
+                </div>
+            
+                <!-- Product container -->
+                <div id="booksContainer"></div>
             </div>
-        
-            <!-- Product container -->
-            <div id="productContainer"></div>
         </main>
 
         

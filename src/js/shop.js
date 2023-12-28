@@ -1,29 +1,50 @@
-// Sample array of products
-const products = [
-  { name: 'Book 1', category: 'books' },
-  { name: 'Book 2', category: 'books' },
-  { name: 'Electronics 1', category: 'electronics' },
-  { name: 'Electronics 2', category: 'electronics' },
+// Data array of books
+const books = [
+  { 
+    name: 'Dune', 
+    img: '/images/item10.jpg',
+    writer: 'Frank Herbert', 
+    category: 'scienceF' 
+  },
+  { 
+    name: 'Book 2', 
+    writer: '', 
+    category: 'scienceF'
+  },
+  { 
+    name: 'Electronics 1', 
+    writer: '', 
+    category: 'comics'
+  },
+  { 
+    name: 'Electronics 2', 
+    writer: '', 
+    category: 'comics' 
+  },
 ];
 
-// Function to filter and display products based on category
-function filterProducts(category) {
-  const filteredProducts = category === 'all' ? products : products.filter(product => product.category === category);
-  displayProducts(filteredProducts);
+// Function to filter and display books based on category
+function filterBooks(category) {
+  const filteredBooks = category === 'all' ? books : books.filter(book => book.category === category);
+  displayBooks(filteredBooks);
 }
 
-// Function to display products in the product container
-function displayProducts(products) {
-  const productContainer = document.getElementById('productContainer');
-  productContainer.innerHTML = '';
+// Function to display books in the books container
+function displayBooks(books) {
+  const booksContainer = document.getElementById('booksContainer');
+  booksContainer.innerHTML = '';
 
-  products.forEach(product => {
-      const productElement = document.createElement('div');
-      productElement.textContent = product.name;
-      // You can customize the product display further based on your design
-      productContainer.appendChild(productElement);
+  books.forEach(book => {
+    const bookElement = document.createElement('div');
+
+    bookElement.innerHTML = `
+      <img src="${book.img}" alt="${book.name}">
+      <p>${book.name}</p>
+      <p>${book.writer}</p>
+    `;
+    booksContainer.appendChild(bookElement);
   });
 }
 
-// Initial display of all products
-filterProducts('all');
+// Initial display of all books
+filterBooks('all');
