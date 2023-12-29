@@ -44,6 +44,16 @@ function changeNavbarBg() {
 document.addEventListener('scroll', changeNavbarBg);
 
 
+
+// Scrolling to top from the bottom
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+
 //Cart Add Function - DENEME
 let cartItems = [];
 let totalPrice = 0;

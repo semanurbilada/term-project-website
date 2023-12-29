@@ -279,6 +279,34 @@ header .container {
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 1.9);
 }
 
+/* Scroll To Top Button */
+.top-button {
+    position: fixed;
+    bottom: 70px;
+    right: 0;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.top-button:hover {
+    transform: scale(1.1);
+}
+
+.top-button button {
+    border: none;
+    cursor: pointer;
+    font-size: 30px;  
+    padding: 10px 20px;
+    border-radius: 20px 0 0 20px;
+    color: var(--bg-dark);
+    background-color: white;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 1.9);
+}
+
+.top-button ion-icon {
+    --ionicon-stroke-width: 40px;
+}
+
 /* Footer */
 .footer {
     color: var(--border-dark);
@@ -422,6 +450,12 @@ header .container {
         padding: 10px 15px;
     }
 
+    /* Scroll To Top Button */
+    .top-button button {
+        font-size: 25px;  
+        padding: 10px 15px;
+    }
+    
     /* Footer */
     .footer-bottom {
         font-size: 14px;

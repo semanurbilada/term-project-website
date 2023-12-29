@@ -116,11 +116,13 @@ main {
 }
 
 .benefit-info {
+    margin-top: 5%;
     font-size: 25px;
     color: var(--border-light);
 }
 
 .benefit-info button {
+    margin-top: 3%;
     color: white;
     cursor: pointer;
     padding: 10px 30px;
