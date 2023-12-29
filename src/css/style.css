@@ -187,9 +187,6 @@ main {
 
 .demo-elements p {
     font-size: 30px;
-    /* default p values disabled */
-    margin-block-start: 0;
-    margin-block-end: 0;
 }
 
 #days,
