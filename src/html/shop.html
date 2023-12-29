@@ -62,16 +62,19 @@
 
         <main>
             <div class="container">
-                <div id="sidebarCategory">
-                    <button onclick="filterBooks('all')">All</button>
-                    <button onclick="filterBooks('scienceF')">Science-Fiction</button>
-                    <button onclick="filterBooks('comics')">Comics</button>
-                    <button onclick="filterBooks('classics')">Classics</button>
-                    <button onclick="filterBooks('romance')">Romance</button>
+                <h3 id="shop-title">All Books</h3>
+                <div class="shop-container">
+                    <div id="sidebarCategory">
+                        <button onclick="filterBooks('all')">All</button>
+                        <button onclick="filterBooks('scienceF')">Science-Fiction</button>
+                        <button onclick="filterBooks('comics')">Comics</button>
+                        <button onclick="filterBooks('classics')">Classics</button>
+                        <button onclick="filterBooks('romance')">Romance</button>
+                    </div>
+                
+                    <!-- Product container -->
+                    <div id="booksContainer"></div>
                 </div>
-            
-                <!-- Product container -->
-                <div id="booksContainer"></div>
             </div>
         </main>
 
