@@ -1,8 +1,157 @@
 /* Blog */
 .blog {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.blog .container {
+    margin: 5% 0;
+    width: 100%;
+}
+
+.blog-tags {
+    margin: 0 0 5%;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog-tags p {
+    color: var(--border-dark);
+    padding: 0 5px;
+    border-radius: 25px;
+    background-color: aliceblue;
+    transition: 0.4s;
+}
+
+.blog-tags p:hover {
+    color: aliceblue;
+    background-color: var(--navbar-scroll);;
+}
+
+.blog-cards {
+    width: 100%;
+    display: grid;
+    row-gap: 50px;
+    justify-content: space-between;
+    grid-template-columns: 15rem 15rem 15rem 15rem;
+}
+
+.blog-card {
+    font-size: 15px;
+    text-align: start;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: var(--border-light);
+    border: solid 1px var(--border-light);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition: 0.4s;
+}
+
+.blog-card h4 {
+    font-weight: 500;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 10vh;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-card ion-icon {
+    font-size: 25px;
+}
+
+.blog-card:hover {
+    background-color: var(--bg-light);
+}
+
+.blog-card button {
+    border: none;
+    cursor: pointer;
+    margin-top: 5%;
+    border-radius: 25px; 
+    padding: 5px 10px;
+    color: white; 
+    background-color: var(--border-light);  
+    transition: 0.5s;
+}
+
+.blog-card button:hover {
+    transform: scale(1.1);
+}
+
+.blog-info {
+    margin: 10% 0 5%;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    color: var(--border-dark);
+}
+
+.blog-info button {
+    margin-top: 3%;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px; 
+    border: solid 1px var(--border-light);
+    background: var(--border-light);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+    transition: 0.5s;
+}
+
+.blog-info button:hover {
+    transform: scale(1.1);
+    background: transparent;
+    color: var(--border-light);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .blog {
+        margin: 10% 0;
+        height: min-content;
+    }
+
+    .blog-cards {
+        grid-template-columns: 15rem 15rem 15rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-cards {
+        justify-content: space-around;
+        grid-template-columns: 13rem 13rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blog-cards {
+        justify-content: center;
+        grid-template-columns: 13rem;
+    }
+
+    .blog-card ion-icon {
+        font-size: 20px;
+    }
+
+    .blog-info {
+        margin: 15% 0 5%;
+        font-size: 18px;
+    }
+
+    .blog-info button {
+        padding: 10px 15px;
+    }
 }
