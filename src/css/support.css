@@ -1,8 +1,99 @@
-/* Grid-swiper */
+/* Support Page */
 .support {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.support-content {
+    width: 100%;
+    height: 60vh;
+    color: white;
+    text-align: start;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: linear-gradient(
+        rgba(123, 0, 255, 0.2), 
+        rgba(255, 255, 0, 0.2)),
+        url('/images/support.jpg');
+}
+
+.support-content .container {
+    height: 60vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.support-content h3 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.support-content p {
+    font-size: 20px;
+}
+
+.support-content .contact-input {
+    margin: 5% 0;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 50px;
+    outline: none;
+    background-color: var(--navbar-scroll);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transition: 0.5s;
+}
+
+.contact-input::placeholder {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.support-content button {
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 50px;
+    background-color: var(--navbar-scroll);
+    transition: 0.5s;
+}
+
+.contact-input:hover,
+.support-content button:hover {
+    cursor: pointer;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.7);
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {    
+    .support-content h3 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .support-content p {
+        font-size: 15px;
+    }
+    
+    .support-content .contact-input {
+        margin: 5% 0;
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+    
+    .contact-input::placeholder {
+        font-size: 15px;
+    }
+
+    .support-content button {
+        padding: 10px 20px;
+    }
 }
