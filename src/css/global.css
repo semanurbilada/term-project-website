@@ -159,6 +159,22 @@ a {
     text-decoration: none;
 }
 
+button {
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px; 
+    border: solid 1px var(--border-light);
+    background: var(--border-light);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    transition: 0.5s;
+}
+button:hover {
+    transform: scale(1.1);
+    background: transparent;
+    color: var(--border-light);
+}
+
 /* Navbar */
 header {
     position: sticky;
