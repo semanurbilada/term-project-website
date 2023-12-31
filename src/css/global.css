@@ -272,29 +272,6 @@ header .container {
     color: var(--border);
 }
 
-/* GitHub Link Button */
-.fixed-button {
-    position: fixed;
-    bottom: 150px;
-    right: 0;
-    z-index: 100;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.fixed-button:hover {
-    transform: scale(1.1);
-}
-
-.fixed-button a {
-    font-size: 28px;
-    padding: 10px 20px;
-    border-radius: 20px 0 0 20px;
-    background-color: white;
-    color: var(--border-dark);
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 1.9);
-}
-
 /* Scroll To Top Button */
 .top-button {
     position: fixed;
@@ -458,12 +435,6 @@ header .container {
     
     .sub-navbar ul a {
         font-size: 15px;
-    }
-
-    /* GitHub Link Button */
-    .fixed-button a {
-        font-size: 25px;
-        padding: 10px 15px;
     }
 
     /* Scroll To Top Button */
