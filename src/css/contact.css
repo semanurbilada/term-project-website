@@ -106,7 +106,7 @@
     .contact {
         height: min-content;
         margin: 10% 0;
-        flex-direction: column; /*TODO: reverse olacak! */
+        flex-direction: column;
         justify-content: center;
         gap: 20px;
     }
