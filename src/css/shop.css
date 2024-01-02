@@ -1,12 +1,11 @@
 main {
     width: 100%;
-    /* height: 100vh; */
     display: flex;
     align-items: start;
     justify-content: center;
     color: var(--text);
     font-size: 25px;
-    padding: 0 0 30% 0;
+    padding: 0 0 10% 0;
 }
 
 main .container {
@@ -155,6 +154,10 @@ main .container {
 }
 
 @media screen and (max-width: 480px) {
+    main {
+        padding: 0 0 20% 0;
+    }
+    
     .shop-container {
         gap: 0;
     }
