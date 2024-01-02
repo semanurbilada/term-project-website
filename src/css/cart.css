@@ -22,6 +22,15 @@
     gap: 30px;
 }
 
+#cartContainer .empty {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
 #cartContainer div {
     width: 100%;
     display: flex;
