@@ -1,5 +1,25 @@
 import books from "./data";
 
+// Function to add a book to the cart
+function addToCart(book) {
+  // Get the existing cart items from local storage or initialize an empty array
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Check if the book is already in the cart
+  const existingBook = cartItems.find(item => item.name === book.name);
+  if (existingBook) {
+    existingBook.quantity += 1;
+  } 
+  else {
+    cartItems.push({ ...book, quantity: 1 });
+  }
+
+  // Save the updated cart items to local storage
+  localStorage.setItem('cart', JSON.stringify(cartItems, null, 2));
+
+  alert(`${book.name} by ${book.writer} added to your cart!`);
+}
+
 // Filter and display func based on category
 function filterBooks(category) {
   const categoryTitle = document.getElementById('shop-title');
@@ -40,8 +60,13 @@ function displayBooks(books) {
       <p class="book-title">${book.name}</p>
       <p class="book-writer">${book.writer}</p>
       <p class="book-price">${book.price}</p>
-      <button onclick="addToCart('${book.name}', ${book.price})">Add to Card</button>
+      <button class="addToCartBtn">Add to Card</button>
     `;
+
+    // Attach an event listener to the "Add to Cart" button
+    bookElement.querySelector('.addToCartBtn').addEventListener('click', function() {
+      addToCart(book);
+    });
 
     booksContainer.appendChild(bookElement);
   });
@@ -50,7 +75,7 @@ function displayBooks(books) {
 // Initial
 filterBooks('all');
 
-// Using event listener instead of onclick event in html;
+// Using event listener in js, instead of onclick event in html;
 document.getElementById('allBtn').addEventListener('click', function() {
   filterBooks('all');
 });
@@ -70,3 +95,29 @@ document.getElementById('classicBtn').addEventListener('click', function() {
 document.getElementById('romanceBtn').addEventListener('click', function() {
   filterBooks('romance');
 });
+
+
+
+
+// let cartItems = [];
+// let totalPrice = 0;
+
+// export function addToCart(books) {
+//   books.forEach(book => {
+//     const bookName = book.name;
+//     const bookPrice = book.price;
+//     console.log(bookName, bookPrice)
+//   });
+
+//   // Add item to cart
+//   cartItems.push({ name: bookName, price: bookPrice });
+
+//   // Update total price
+//   totalPrice += bookPrice;
+// }
+
+// addToCart()
+
+// document.getElementById('addToCartBtn').addEventListener('click', function() {
+//   addToCart(bookName, bookPrice)
+// })

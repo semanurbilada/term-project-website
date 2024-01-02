@@ -60,28 +60,12 @@
             </div>
         </header>    
 
-        <main>
-            <div class="container-cart">
-                <h1>Cart</h1>
-                <div class="product">
-                    <img src="book.jpg" alt="Book Image">
-                    <h3>Product Name</h3>
-                    <p class="price">$19.99</p>
-                    <button onclick="addToCart()">Add to Cart</button>
-                </div>
-                <div class="cart">
-                    <h2>Shopping Cart</h2>
-                    <ul id="cartItems"></ul>
-                    <p>Total: $<span id="totalPrice">0.00</span></p>
-                </div>
+        <main class="cart">
+            <div class="container">
+                <h3>Cart</h3>
+                <div id="cartContainer"></div>
             </div>
         </main>
-
-        <section class="fixed-button">
-            <a href="https://github.com/semanurbilada/term-project-website" target="_blank">
-                <ion-icon name="logo-github"></ion-icon>
-            </a>
-        </section>
 
         <section class="top-button">
             <button onclick="scrollToTop()"> 
@@ -131,6 +115,7 @@
         </footer>
 
         <script src="../js/index.js"></script>  
+        <script src="../js/cart.js"></script>  
         <!-- ionicons -->
         <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
