@@ -1,25 +1,5 @@
 import books from "./data";
 
-// Function to add a book to the cart
-function addToCart(book) {
-  // Get the existing cart items from local storage or initialize an empty array
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-
-  // Check if the book is already in the cart
-  const existingBook = cartItems.find(item => item.name === book.name);
-  if (existingBook) {
-    existingBook.quantity += 1;
-  } 
-  else {
-    cartItems.push({ ...book, quantity: 1 });
-  }
-
-  // Save the updated cart items to local storage
-  localStorage.setItem('cart', JSON.stringify(cartItems, null, 2));
-
-  alert(`${book.name} by ${book.writer} added to your cart!`);
-}
-
 // Filter and display func based on category
 function filterBooks(category) {
   const categoryTitle = document.getElementById('shop-title');
@@ -46,15 +26,14 @@ function filterBooks(category) {
   categoryTitle.textContent = getCategoryTitle(category);
 }
 
-
 // Details of books
 function displayBooks(books) {
   const booksContainer = document.getElementById('booksContainer');
   booksContainer.innerHTML = '';
-
+  
   books.forEach(book => {
     const bookElement = document.createElement('div'); 
-
+    
     bookElement.innerHTML = `
       <img src="${book.img}" alt="${book.name}">
       <p class="book-title">${book.name}</p>
@@ -62,12 +41,12 @@ function displayBooks(books) {
       <p class="book-price">${book.price}</p>
       <button class="addToCartBtn">Add to Card</button>
     `;
-
-    // Attach an event listener to the "Add to Cart" button
+    
+    // Use event listener to the "Add to Cart" button
     bookElement.querySelector('.addToCartBtn').addEventListener('click', function() {
       addToCart(book);
     });
-
+    
     booksContainer.appendChild(bookElement);
   });
 }
@@ -97,27 +76,22 @@ document.getElementById('romanceBtn').addEventListener('click', function() {
 });
 
 
+// Add to cart func
+function addToCart(book) {
+  // Existing cart items from local storage or initialize an empty array
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
+  // Check if the book is already in the cart
+  const existingBook = cartItems.find(item => item.name === book.name);
 
-// let cartItems = [];
-// let totalPrice = 0;
+  if (existingBook) {
+    existingBook.quantity += 1;
+  } 
+  else {
+    cartItems.push({ ...book, quantity: 1 });
+  }
 
-// export function addToCart(books) {
-//   books.forEach(book => {
-//     const bookName = book.name;
-//     const bookPrice = book.price;
-//     console.log(bookName, bookPrice)
-//   });
+  localStorage.setItem('cart', JSON.stringify(cartItems, null, 2));
 
-//   // Add item to cart
-//   cartItems.push({ name: bookName, price: bookPrice });
-
-//   // Update total price
-//   totalPrice += bookPrice;
-// }
-
-// addToCart()
-
-// document.getElementById('addToCartBtn').addEventListener('click', function() {
-//   addToCart(bookName, bookPrice)
-// })
+  alert(`${book.name} by ${book.writer} added to your cart!`);
+}

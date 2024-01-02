@@ -15,7 +15,11 @@ main .container {
 }
 
 #shop-title {
+    width: 100%;
+    font-weight: 400;
     text-align: start;
+    text-decoration: underline;
+    text-underline-offset: 10px;
 }
 
 .shop-container {
