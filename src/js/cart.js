@@ -9,10 +9,12 @@ function displayCartItems() {
     // Check if the cart is empty
     if (cartItems.length === 0) {
         cartContainer.innerHTML = `
-            <p>Your cart is empty :(</p>
-            <a href="../html/shop.html" target="_blank">
-                <button>SHOP NOW</button>
-            </a>
+           <div class="empty">
+                <p>Your cart is empty :(</p>
+                <a href="../html/shop.html" target="_blank">
+                    <button>SHOP NOW</button>
+                </a>
+            </div>
         `;
         priceContainer.innerHTML = '';
     } 

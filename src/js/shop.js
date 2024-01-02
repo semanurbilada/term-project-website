@@ -5,8 +5,21 @@ function filterBooks(category) {
   const categoryTitle = document.getElementById('shop-title');
   const filteredBooks = category === 'all' ? books : books.filter(book => book.category === category);
 
-  displayBooks(filteredBooks);
-  
+  if(filteredBooks.length === 0) {
+    const booksContainer = document.getElementById('booksContainer');
+    booksContainer.innerHTML = `
+      <p class="no-books">
+        No books available in this ${category} category.
+        <br/>
+        <br/>
+        Stay tuned!
+      </p>
+    `;
+  } 
+  else {
+    displayBooks(filteredBooks);
+  }
+
   const getCategoryTitle = (category) => {
     switch (category) {
       case 'all':
