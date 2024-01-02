@@ -9,6 +9,8 @@
     font-weight: 300;
     text-align: start;
     color: var(--text-dark);
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }
 
 .fav .fav-items {
@@ -83,7 +85,7 @@
     }
 
     .fav-item {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         gap: 10px;
     }
