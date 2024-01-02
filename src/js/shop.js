@@ -1,55 +1,33 @@
-// Data array of books
-const books = [
-  { 
-    name: 'Dune', 
-    img: '/images/item10.jpg',
-    writer: 'Frank Herbert', 
-    price: '70$',
-    category: 'scienceF' 
-  },
-  { 
-    name: 'Book 2', 
-    writer: '', 
-    price: '70$',
-    category: 'scienceF'
-  },
-  { 
-    name: 'Electronics 1', 
-    writer: '', 
-    price: '70$',
-    category: 'comics'
-  },
-  { 
-    name: 'Electronics 2', 
-    writer: '', 
-    price: '70$',
-    category: 'comics' 
-  },
-];
+import books from "./data";
 
-// Function to filter and display books based on category
+// Filter and display func based on category
 function filterBooks(category) {
+  const categoryTitle = document.getElementById('shop-title');
   const filteredBooks = category === 'all' ? books : books.filter(book => book.category === category);
+
   displayBooks(filteredBooks);
   
-  const categoryTitle = document.getElementById('shop-title');
+  const getCategoryTitle = (category) => {
+    switch (category) {
+      case 'all':
+        return 'Category: All Books';
+      case 'fiction':
+        return 'Category: Fiction';
+      case 'comics':
+        return 'Category: Comics';
+      case 'romance':
+        return 'Category: Romance';
+      case 'classic':
+        return 'Category: Classics';
+      default:
+        return 'Category: All Books';
+    }
+  }
   categoryTitle.textContent = getCategoryTitle(category);
 }
-//TODO: more customize edilmeli !!!! (içerikle birlikte)
-function getCategoryTitle(category) {
-  switch (category) {
-    case 'all':
-      return 'All Books';
-    case 'scienceF':
-      return 'Science Fiction';
-    case 'comics':
-      return 'Comics';
-    default:
-      return 'All Categories';
-  }
-}
 
-// Function to display books in the books container
+
+// Details of books
 function displayBooks(books) {
   const booksContainer = document.getElementById('booksContainer');
   booksContainer.innerHTML = '';
@@ -62,11 +40,33 @@ function displayBooks(books) {
       <p class="book-title">${book.name}</p>
       <p class="book-writer">${book.writer}</p>
       <p class="book-price">${book.price}</p>
-      <button>Add to Card</button>
+      <button onclick="addToCart('${book.name}', ${book.price})">Add to Card</button>
     `;
+
     booksContainer.appendChild(bookElement);
   });
 }
 
-// Initial display of all books
+// Initial
 filterBooks('all');
+
+// Using event listener instead of onclick event in html;
+document.getElementById('allBtn').addEventListener('click', function() {
+  filterBooks('all');
+});
+
+document.getElementById('fictionBtn').addEventListener('click', function() {
+  filterBooks('fiction');
+});
+
+document.getElementById('comicsBtn').addEventListener('click', function() {
+  filterBooks('comics');
+});
+
+document.getElementById('classicBtn').addEventListener('click', function() {
+  filterBooks('classic');
+});
+
+document.getElementById('romanceBtn').addEventListener('click', function() {
+  filterBooks('romance');
+});

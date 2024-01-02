@@ -65,24 +65,24 @@
                 <h3 id="shop-title">All Books</h3>
                 <div class="shop-container">
                     <div id="sidebarCategory">
-                        <button onclick="filterBooks('all')">All</button>
-                        <button onclick="filterBooks('scienceF')">Science-Fiction</button>
-                        <button onclick="filterBooks('comics')">Comics</button>
-                        <button onclick="filterBooks('classics')">Classics</button>
-                        <button onclick="filterBooks('romance')">Romance</button>
+                        <button class="filter-button" id="allBtn">All Books</button>
+                        <button class="filter-button" id="fictionBtn">Fiction</button>
+                        <button class="filter-button" id="comicsBtn">Comics</button>
+                        <button class="filter-button" id="classicBtn">Classics</button>
+                        <button class="filter-button" id="romanceBtn">Romance</button>
                     </div>
+
+                    <div class="shop-border"></div>
                 
-                    <!-- Product container -->
                     <div id="booksContainer"></div>
                 </div>
             </div>
         </main>
 
-        
-        <section class="fixed-button">
-            <a href="https://github.com/semanurbilada/term-project-website" target="_blank">
-                <ion-icon name="logo-github"></ion-icon>
-            </a>
+        <section class="top-button">
+            <button onclick="scrollToTop()"> 
+                <ion-icon name="arrow-up-outline"></ion-icon>
+            </button>
         </section>
 
         <footer class="footer">
@@ -126,8 +126,8 @@
             </section>
         </footer>
 
+        <script type="module" src="../js/shop.js"></script>
         <script src="../js/index.js"></script>  
-        <script src="../js/shop.js"></script>
         <!-- ionicons -->
         <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>

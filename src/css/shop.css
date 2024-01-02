@@ -1,15 +1,16 @@
 main {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: start;
     justify-content: center;
     color: var(--text);
     font-size: 25px;
+    padding: 0 0 30% 0;
 }
 
 main .container {
-    margin-top: 5%;
+    margin-top: 2%;
     width: 100%;
 }
 
@@ -24,35 +25,55 @@ main .container {
 }
 
 #sidebarCategory {
-
+    width: 190px;
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: start;
     gap: 10px;
-    border-radius: 15px;
-    padding: 15px 20px;
-    background-color: var(--navbar-dark);
+    /* border-width: 0 2px 0 0;
+    border-style: solid; */
 }
 
-#sidebarCategory button {
-    font-size: 15px;
-    border: none;
+.filter-button {
+    font-size: 18px;
     cursor: pointer;
-    color: white;
-    background-color: transparent;
+    color: var(--text);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: start;
+    background-color: var(--bg-light);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    transition: 0.5s;
+}
+
+.filter-button:hover {
+    transform: scale(1.1);
+    background-color: var(--bg-light);
+}
+
+.shop-border {
+    border: solid 1px var(--text);
+    height: 100vh;
 }
 
 #booksContainer {
     display: grid;
-    /*respnsive'de editlecenek*/
     row-gap: 40px;
     column-gap: 40px;
     grid-template-columns: 13rem 13rem 13rem;
+    /* border-width: 0 1px 0 0;
+    border-style: solid;
+    height: 100vh; */
 }
 
 #booksContainer div {
     display: flex;
     flex-direction: column;
     align-items: start;
+    text-align: start;
     gap: 8px;
     font-size: 14px;
     border-width: 0 1px 0 0;
@@ -74,6 +95,7 @@ main .container {
 }
 
 #booksContainer .book-title {
+    width: 150px;
     font-weight: 500;
 }
 
@@ -85,4 +107,33 @@ main .container {
 
 #booksContainer button:hover {
     transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    #booksContainer {
+        grid-template-columns: 13rem 13rem;
+    }
+
+    #booksContainer div {
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #booksContainer {
+        grid-template-columns: 13rem;
+    }
+
+    #booksContainer div {
+        font-size: 14px;
+        border-width: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
 }
