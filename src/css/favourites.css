@@ -34,6 +34,7 @@
     height: 15vh;
     object-fit: fill;
     transition: 0.5s;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 .fav-item img:hover {
@@ -60,8 +61,8 @@
 }
 
 .fav-item-border {
-    border: 1px solid var(--text-dark);
     width: 100%;
+    border: 1px solid var(--text-dark);
 }   
 
 /* Responsive */

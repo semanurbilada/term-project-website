@@ -1,14 +1,15 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// Base aos-animation func. to use other pages;
 AOS.init({
     //once: true,
     //duration: 1000,
     disable: false,
 });
 
-// Base aos animation file to use other pages!
 
+// Complex aos-animation func. for responsive;
 // function initializeAOS() {
 //     const screenWidth = window.innerWidth;
 
@@ -23,7 +24,7 @@ AOS.init({
 //         });
 //     }
 // }
-// // Call the function on page load
+
 // initializeAOS();
 
 // window.addEventListener('resize', initializeAOS);

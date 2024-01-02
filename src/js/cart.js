@@ -51,7 +51,7 @@ function displayCartItems() {
                 cartItems.splice(indexToDelete, 1);
                 localStorage.setItem('cart', JSON.stringify(cartItems));
 
-                alert(`${item.name} by ${item.writer} removed from your cart!`);
+                alert(`You removed a book from your cart!`);
 
                 item.closest('div').remove();
                 displayCartItems();

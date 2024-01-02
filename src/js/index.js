@@ -45,7 +45,7 @@ document.addEventListener('scroll', changeNavbarBg);
 
 
 
-// Scrolling to top from the bottom
+// Scrolling to top func
 function scrollToTop() {
     window.scrollTo({
         top: 0,
